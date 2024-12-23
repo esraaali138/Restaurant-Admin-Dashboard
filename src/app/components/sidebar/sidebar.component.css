@@ -1,0 +1,7 @@
+/* .istoggled{
+    width: 20px;
+    overflow-y: hidden;
+} */
+.toggled{
+    display: none;
+ }

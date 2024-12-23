@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { DashboardContentComponent } from './components/dashboard-content/dashboard-content.component';
+import { HeaderComponent } from './components/header/header.component';
+import { MainContentComponent } from './components/main-content/main-content.component';
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    DashboardContentComponent
+    DashboardContentComponent,
+    HeaderComponent,
+    MainContentComponent
   ],
   imports: [
     BrowserModule,
