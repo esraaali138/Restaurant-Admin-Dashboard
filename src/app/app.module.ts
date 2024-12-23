@@ -13,7 +13,7 @@ import { MainContentComponent } from './components/main-content/main-content.com
     SidebarComponent,
     DashboardContentComponent,
     HeaderComponent,
-    MainContentComponent
+    MainContentComponent,
   ],
   imports: [
     BrowserModule,

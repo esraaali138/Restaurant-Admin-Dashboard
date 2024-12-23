@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,5 +9,8 @@ import { Component, Input } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  @Input() sideBarToggled! : boolean
+  constructor(private router : Router){}
+    @Input() sideBarToggled! : boolean
+
+ 
 }
