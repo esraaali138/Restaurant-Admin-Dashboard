@@ -5,7 +5,11 @@ module.exports = {
       "./src/**/*.{html,ts}",
     ],
     theme: {
-      extend: {},
+      extend: {
+        width:{
+          '98':'440px'
+        }
+      },
     },
     plugins: [
       require('flowbite/plugin')

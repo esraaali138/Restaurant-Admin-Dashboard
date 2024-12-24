@@ -1,9 +1,10 @@
 import { DashboardContentComponent } from './components/dashboard-content/dashboard-content.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard';
 const routes: Routes = [
   {
-    path:'dashboard', component : DashboardContentComponent,
+    path:'dashboard', component : DashboardContentComponent, canActivate:[AuthGuard]
   },
   {
     path:'user' , loadChildren:()=> import('./modules/user-profile/user-profile-routing.module').then(m=>m.UserProfileRoutingModule)
@@ -12,6 +13,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers:[AuthGuard]
 })
 export class AppRoutingModule { }

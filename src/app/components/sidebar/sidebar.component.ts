@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
@@ -8,19 +8,12 @@ import { Router, NavigationEnd } from '@angular/router';
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css',
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent  {
   isToggled: boolean = false;
-  showLayout = true;
-  constructor(private router: Router) {}
+  @Input() showLayout!:boolean
 
-  ngOnInit(): void {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        if (this.router.url === '/user/signup' || '/user/login') this.showLayout = false;
-        else this.showLayout = true;
-      }
-    });
-  }
+
+
   toggleSidebar() {
     this.isToggled = !this.isToggled;
   }

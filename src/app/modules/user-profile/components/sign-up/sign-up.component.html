@@ -1,0 +1,50 @@
+<form
+  class="bg-red-300 w-98 p-5 flex flex-col justify-center m-auto h-5/6"
+  #userForm="ngForm"
+>
+  <div class="flex justify-center items-center gap-4 p-3 mt-5">
+    <p>logo</p>
+    <p>name of logo</p>
+  </div>
+  <p class="text-center">Sign up your account</p>
+  <div class="flex flex-col w-5/6 m-auto p-3">
+    <label for="username">username</label>
+    <input
+      placeholder="username"
+      type="text"
+      name="username"
+      [(ngModel)]="user.name"
+    />
+  </div>
+
+  <div class="flex flex-col w-5/6 m-auto p-3">
+    <label for="email">Email</label>
+    <input
+      placeholder="esraa@example.com"
+      type="text"
+      name="email"
+      [(ngModel)]="user.email"
+    />
+  </div>
+
+  <div class="flex flex-col w-5/6 m-auto p-3">
+    <label for="password">Password</label>
+    <input type="password" name="password" [(ngModel)]="user.password" />
+  </div>
+  <i class="fa fa-eye-slash"></i>
+
+  <div class="flex flex-col w-5/6 m-auto p-3">
+    <button
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      type="button"
+    (click)="onSubmit()"
+    >
+      sign up
+    </button>
+    <div class="flex gap-1 mt-3">
+      <p>Already have an account?</p>
+
+      <a (click)="navigateToLogin()"> Sign up </a>
+    </div>
+  </div>
+</form>

@@ -1,5 +1,6 @@
 <div
   [ngStyle]="{ marginLeft: sideBarToggled ? '3.4rem' : '15rem' }"
+  [ngClass]="{'showLayout' : showLayout}"
   class="bg-red-900 p-8 h-svh"
 >
   <router-outlet></router-outlet>
