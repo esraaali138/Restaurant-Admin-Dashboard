@@ -7,6 +7,10 @@ Injectable({
 
 export class AuthService {
   private fackJwtToken = 'fake-jwt-token';
+  private isAuthenticated = false;
+  constructor() {
+    this.isAuthenticated = localStorage.getItem('jwt') === this.fackJwtToken;
+  }
 
   signUp(userName: string, email: string, password: string): string {
     return `userName is : ${userName} with email : ${email} and password ${password} registered successfully`;
@@ -20,10 +24,11 @@ export class AuthService {
       return 'Invalid Credentials';
     }
   }
-  isAuthenticated(): boolean {
-    return localStorage.getItem('jwt') === this.fackJwtToken;
+  isAuthenticatedUser(): boolean {
+    return this.isAuthenticated;
   }
   logOut(): void {
     localStorage.removeItem('jwt');
+    this.isAuthenticated = false
   }
 }
