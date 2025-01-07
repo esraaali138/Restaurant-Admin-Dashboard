@@ -1,17 +1,20 @@
-<form
-  class="bg-red-300 w-98 p-5 flex flex-col justify-center m-auto h-5/6"
+<div class="h-full flex justify-center items-center ">
+  <form
+  class="bg-white mt-2 w-98 p-5 flex flex-col justify-center  rounded h-5/6	"
   #userForm="ngForm"
 >
-  <div class="flex justify-center items-center gap-4 p-3 mt-5">
+  <div class="flex justify-center items-center gap-4">
     <p>logo</p>
     <p>name of logo</p>
   </div>
-  <p class="text-center">Sign up your account</p>
+  <p class="text-center mt-3 font-medium text-gray-700 text-sm">
+    Sign in your account
+  </p>
 
-
-  <div class="flex flex-col w-5/6 m-auto p-3">
-    <label for="email">Email</label>
+  <div class="flex flex-col w-96 py-3 px-2">
+    <label class="text-sm" for="email">Email</label>
     <input
+      class="border-gray-300 mt-2 focus:ring-0 focus:border-orange-400"
       placeholder="esraa@example.com"
       type="text"
       name="email"
@@ -19,23 +22,51 @@
     />
   </div>
 
-  <div class="flex flex-col w-5/6 m-auto p-3">
-    <label for="password">Password</label>
-    <input type="password" name="password" [(ngModel)]="user.password" />
-  </div>
-  <i class="fa fa-eye-slash"></i>
-
-  <div class="flex flex-col w-5/6 m-auto p-3">
-    <button
-      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-      type="submit"
-    >
-      sign up
-    </button>
-    <div class="flex gap-1 mt-3">
-      <p>Already have an account?</p>
-
-      <a (click)="navigateToSign()"> Sign in </a>
+  <div class="flex flex-col w-96 py-3 px-2">
+    <label class="text-sm" for="password">Password</label>
+    <div class="relative">
+      <input
+        class="border-gray-300 mt-2 focus:ring-0 focus:border-orange-400 w-full pr-10"
+        type="password"
+        name="password"
+        placeholder="password"
+        [(ngModel)]="user.password"
+      />
+      <i
+        class="fa fa-eye-slash absolute right-3 top-5 text-gray-400 cursor-pointer"
+      ></i>
     </div>
   </div>
-</form> 
+
+  <div class="flex justify-between items-center w-96 py-3 px-2">
+    <div class="flex items-center gap-2">
+      <input type="checkbox" />
+      <p class="text-sm text-gray-500">Remember my preference</p>
+    </div>
+    <p class="text-sm" style="color: rgb(255, 114, 13)">Forgot Password?</p>
+  </div>
+
+  <div class="flex flex-col w-96 py-3 px-2">
+    <button
+      (click)="login()"
+      class="hover:bg-orange text-white font-bold py-2 px-4 rounded"
+      style="background: #ff720d"
+      type="submit"
+    >
+      sign In
+    </button>
+    <div class="flex gap-1 mt-3 text-gray-500 text-sm">
+      <p>Don't have an account</p>
+
+      <a
+        class="cursor-pointer"
+        style="color: rgb(255, 114, 13)"
+        (click)="navigateToSign()"
+      >
+        Sign up
+      </a>
+    </div>
+  </div>
+</form>
+
+</div>

@@ -7,7 +7,13 @@ module.exports = {
     theme: {
       extend: {
         width:{
-          '98':'440px'
+          '98':'420px'
+        },
+        height:{
+          '98':'540px'
+        },
+        backgroundColor:{
+          'orange' : '#FF720D'
         }
       },
     },

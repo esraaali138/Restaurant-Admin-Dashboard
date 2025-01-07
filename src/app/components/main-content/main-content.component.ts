@@ -10,4 +10,7 @@ import { Component, Input } from '@angular/core';
 export class MainContentComponent {
   @Input() sideBarToggled! : boolean
   @Input() showLayout!:boolean;
+
+ 
+  
 }

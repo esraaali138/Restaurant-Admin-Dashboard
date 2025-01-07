@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
-
+import { AuthUser } from '../../models/auth-user';
 @Component({
   selector: 'app-sign-up',
   standalone: false,
@@ -11,24 +11,20 @@ import { AuthService } from '../../services/auth.service';
 })
 export class SignUpComponent {
   constructor(private router: Router, private authService: AuthService) {}
-  user = {
-    name: '',
+  user: AuthUser = {
+    username: '',
     email: '',
     password: '',
   };
-  onSubmit() {
-    console.log('submit');
-
-    const user = this.authService.signUp(
-      this.user.name,
-      this.user.email,
-      this.user.password
-    );
-    if (user) {
-      console.log('user', user);
-
-      this.router.navigateByUrl('/user/login');
-    }
+  signUp() {
+    this.authService.signUp(this.user).subscribe({
+      next: (res) => {
+        this.navigateToLogin();
+      },
+      error: (err) => {
+        console.log('err', err);
+      },
+    });
   }
   navigateToLogin() {
     this.router.navigateByUrl('/user/login');

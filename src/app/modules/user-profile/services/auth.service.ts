@@ -1,34 +1,39 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { retry } from 'rxjs';
-
-Injectable({
+import { AuthUser } from '../models/auth-user';
+import { of } from 'rxjs';
+@Injectable({
   providedIn: 'root',
-});
-
+})
 export class AuthService {
-  private fackJwtToken = 'fake-jwt-token';
-  private isAuthenticated = false;
-  constructor() {
-    this.isAuthenticated = localStorage.getItem('jwt') === this.fackJwtToken;
+  private fakeJwtToken = 'fake-jwt-token';
+  constructor() {}
+
+  signUp(user: AuthUser) {
+    localStorage.setItem('userData', JSON.stringify(user));
+    return of(this.fakeJwtToken);
   }
 
-  signUp(userName: string, email: string, password: string): string {
-    return `userName is : ${userName} with email : ${email} and password ${password} registered successfully`;
-  }
-
-  signIn(email: string, password: string): string {
-    if (email === 'email' && password === 'password') {
-      localStorage.setItem('jwt', this.fackJwtToken);
-      return 'Sign In Successful';
-    } else {
-      return 'Invalid Credentials';
+  signIn(user: AuthUser) {
+    const userDetails = localStorage.getItem('userData');
+    if (userDetails) {
+      const parsedData = JSON.parse(userDetails);
+      if (
+        parsedData.email !== user.email ||
+        parsedData.password !== user.password
+      ) {
+        throw new Error('the email or password wrong');
+      }
     }
+
+    localStorage.setItem('jwt', this.fakeJwtToken);
+    return of(this.fakeJwtToken);
   }
-  isAuthenticatedUser(): boolean {
-    return this.isAuthenticated;
+  isAuthenticatedUser() {
+    return localStorage.getItem('jwt') === this.fakeJwtToken;
   }
   logOut(): void {
     localStorage.removeItem('jwt');
-    this.isAuthenticated = false
+    localStorage.removeItem('userData');
   }
 }

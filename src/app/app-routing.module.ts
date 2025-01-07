@@ -4,16 +4,29 @@ import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth.guard';
 const routes: Routes = [
   {
-    path:'dashboard', component : DashboardContentComponent, canActivate:[AuthGuard]
+    path: 'dashboard',
+    component: DashboardContentComponent,
+    canActivate: [AuthGuard],
   },
   {
-    path:'user' , loadChildren:()=> import('./modules/user-profile/user-profile-routing.module').then(m=>m.UserProfileRoutingModule)
-  }
+    path: 'customers',
+    loadChildren: () =>
+      import('./modules/customers/customers-routing.module').then(
+        (m) => m.CustomersRoutingModule
+      ),
+  },
+  {
+    path: 'user',
+    loadChildren: () =>
+      import('./modules/user-profile/user-profile-routing.module').then(
+        (m) => m.UserProfileRoutingModule
+      ),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers:[AuthGuard]
+  providers: [AuthGuard],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

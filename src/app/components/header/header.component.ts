@@ -1,15 +1,27 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '../../modules/user-profile/services/auth.service';
 
 @Component({
   selector: 'app-header',
   standalone: false,
-  
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
-})
-export class HeaderComponent {
-  constructor(private router : Router){}
-    @Input() sideBarToggled! : boolean
 
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.css',
+})
+export class HeaderComponent implements OnInit {
+  constructor(private authService: AuthService) {}
+  @Input() sideBarToggled!: boolean;
+  isAuthenticated: boolean = false;
+  parsedData: any;
+  ngOnInit(): void {
+    this.isAuthenticated = this.authService.isAuthenticatedUser();
+    const userDetails: any = localStorage.getItem('userData');
+    this.parsedData = JSON.parse(userDetails);
+  }
+
+  logOut() {
+    this.authService.logOut();
+    this.isAuthenticated = false;
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
@@ -17,7 +17,7 @@ export class AppComponent {
       // console.log('event',event);
 
       if (event instanceof NavigationEnd) {
-        console.log('event', event);
+        // console.log('event', event);
 
         const currentRoute = event.urlAfterRedirects;
 

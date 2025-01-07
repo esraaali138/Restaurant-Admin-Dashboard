@@ -7,6 +7,8 @@ import { DashboardContentComponent } from './components/dashboard-content/dashbo
 import { HeaderComponent } from './components/header/header.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { UserProfileModule } from './modules/user-profile/user-profile.module';
+import { CommonModule } from '@angular/common';
+import { CustomersModule } from './modules/customers/customers.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,9 +20,11 @@ import { UserProfileModule } from './modules/user-profile/user-profile.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserProfileModule
+    UserProfileModule,
+    CommonModule,
+    CustomersModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
