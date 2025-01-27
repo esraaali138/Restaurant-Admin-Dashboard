@@ -1,0 +1,17 @@
+<div class="flex flex-col w-90 py-2 px-2">
+  <label class="text-sm" for="customername">{{ label }}</label>
+  <input
+    class="form-control border-gray-300 mt-2 focus:ring-0 focus:border-orange-400"
+    [name]="name"
+    id="name"
+    [type]="type"
+    required
+    autocomplete="off"
+    [(ngModel)]="value"
+    [pattern]="pattern"
+  />
+
+  <div *ngIf="!value" class="alert text-red-500 text-md">
+    {{ errorMessage }}
+  </div>
+</div>

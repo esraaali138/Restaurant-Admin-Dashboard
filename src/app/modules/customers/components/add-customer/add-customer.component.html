@@ -1,1 +1,84 @@
-<p>add-customer works!</p>
+<div
+  class="flex justify-center items-center fixed top-[30%] left-[50%] transform -translate-x-1/2 -translate-y-[5%] h-[250px] z-[2000]"
+  *ngIf="isOpen"
+>
+  <form
+    #customerForm="ngForm"
+    class="bg-red-300 mt-2 w-95 p-5 flex flex-col justify-center rounded h-88 bottom-100"
+  >
+    <div class="flex justify-between">
+      <p>add contact</p>
+      <button (click)="closeModel()">
+        <svg
+          class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+    </div>
+    <hr />
+
+    <app-input-field
+      label="Customer Name"
+      class="border-0 bg-transparent"
+      errorMessage="this field is required"
+      [(ngModel)]="newUser.CustomerName"
+      name="customerName"
+      type="text"
+    ></app-input-field>
+
+    <app-input-field
+      label="Address"
+      class="border-0 bg-transparent"
+      errorMessage="this field is required"
+      [(ngModel)]="newUser.Location"
+      name="address"
+      type="text"
+    ></app-input-field>
+    <app-input-field
+      label="Total Spent"
+      class="border-0 bg-transparent"
+      errorMessage="this field is required"
+      [(ngModel)]="newUser.TotalSpent"
+      name="totalspent"
+      type="text"
+    ></app-input-field>
+    <app-input-field
+      label="Last Order"
+      class="border-0 bg-transparent"
+      errorMessage="this field is required"
+      [(ngModel)]="newUser.LastOrder"
+      name="lastorder"
+      type="text"
+    ></app-input-field>
+
+    <div class="flex w-96 py-2 px-2 gap-2">
+      <button
+        [disabled]="!customerForm.valid"
+        class="hover:bg-orange text-white font-bold py-2 px-4 rounded"
+        style="background: #ff720d"
+        type="button"
+        (click)="addUser()"
+      >
+        Save
+      </button>
+      <button
+        class="hover:bg-orange text-white font-bold py-2 px-4 rounded"
+        style="background: #ff720d"
+        type="button"
+        (click)="closeModel()"
+      >
+        Close
+      </button>
+    </div>
+  </form>
+</div>

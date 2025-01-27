@@ -9,6 +9,9 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { UserProfileModule } from './modules/user-profile/user-profile.module';
 import { CommonModule } from '@angular/common';
 import { CustomersModule } from './modules/customers/customers.module';
+import { authInterceptor } from './auth.interceptor';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +27,10 @@ import { CustomersModule } from './modules/customers/customers.module';
     CommonModule,
     CustomersModule,
   ],
-  providers: [],
+  providers: [
+    provideHttpClient(withInterceptors([authInterceptor])),
+
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

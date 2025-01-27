@@ -1,8 +1,9 @@
 export interface Customer {
-  CustomerID: string;
+  CustomerID?: string;
   CustomerName: string;
-  JoinDate: string;
+  JoinDate?: string;
   Location: string;
-  TotalSpent: number;
-  LastOrder: number;
+  TotalSpent: any;
+  LastOrder?: any;
+  [key: string]: any;
 }

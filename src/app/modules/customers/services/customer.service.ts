@@ -5,10 +5,17 @@ import { Customer } from '../models/customer';
   providedIn: 'root',
 })
 export class CustomerService {
-  constructor(private http: HttpClient) {}
+  // constructor(private http: HttpClient) {}
+  // private apiUrl = 'http://localhost:3000/customers';
+  // getCustomers() {
+  //   return this.http.get<Customer[]>(this.apiUrl);
+  // }
 
-  getCustomers() {
+  // addUser(newUser: Customer) {
+  //   return this.http.post(this.apiUrl, newUser);
+  // }
 
-    return this.http.get<Customer[]>('assets/customer.json');
+  calc(a:number , b:number){
+    return a + b
   }
 }
