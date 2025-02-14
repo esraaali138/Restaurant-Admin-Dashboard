@@ -11,49 +11,59 @@
       Sign up your account
     </p>
     <div class="flex flex-col w-96 py-3 px-2">
-      <label class="text-sm" for="username">username</label>
-      <input
-        class="border-gray-300 mt-2 focus:ring-0 focus:border-orange-400"
+      <app-input-field
+        class="border-0 bg-transparent"
+        label="username"
         placeholder="username"
         type="text"
         name="username"
         [(ngModel)]="user.username"
-      />
+        [submitted]="isSubmitted"
+        [pattern]="letterPattern"
+        errorMessage="Only letters allowed"
+      ></app-input-field>
+      <p class ="bg-red-700">{{user.username}}</p>
+
     </div>
 
     <div class="flex flex-col w-96 py-3 px-2">
-      <label class="text-sm" for="email">Email</label>
-      <input
-        class="border-gray-300 mt-2 focus:ring-0 focus:border-orange-400"
-        placeholder="esraa@example.com"
+      <app-input-field
+        class="border-0 bg-transparent"
+        label="Email"
+        placeholder="email"
         type="text"
         name="email"
         [(ngModel)]="user.email"
-      />
+        [submitted]="isSubmitted"
+        [pattern]="emailPattern"
+        errorMessage="Invalid Email"
+      ></app-input-field>
     </div>
 
     <div class="flex flex-col w-96 py-3 px-2">
-      <label class="text-sm" for="password">Password</label>
       <div class="relative">
-        <input
-          class="border-gray-300 mt-2 focus:ring-0 focus:border-orange-400 w-full pr-10"
-          type="password"
+        <app-input-field
+          class="border-0 bg-transparent mt-2 focus:ring-0 focus:border-orange-400 w-full pr-10"
+          label="Password"
+          placeholder="Password"
+          type="Password"
           name="password"
-          placeholder="password"
           [(ngModel)]="user.password"
-        />
+          [submitted]="isSubmitted"
+        ></app-input-field>
         <i
           class="fa fa-eye-slash absolute right-3 top-5 text-gray-400 cursor-pointer"
         ></i>
       </div>
     </div>
 
+
     <div class="flex flex-col w-96 py-3 px-2">
       <button
         class="hover:bg-orange text-white font-bold py-2 px-4 rounded"
         style="background: #ff720d"
         type="button"
-        (click)="signUp()"
+        (click)="signUp(userForm)"
       >
         sign up
       </button>
@@ -65,7 +75,7 @@
           style="color: rgb(255, 114, 13)"
           (click)="navigateToLogin()"
         >
-          Sign up
+          Sign In
         </a>
       </div>
     </div>

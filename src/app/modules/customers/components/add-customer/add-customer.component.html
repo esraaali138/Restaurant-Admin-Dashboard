@@ -30,10 +30,12 @@
     <app-input-field
       label="Customer Name"
       class="border-0 bg-transparent"
-      errorMessage="this field is required"
       [(ngModel)]="newUser.CustomerName"
       name="customerName"
       type="text"
+      [submitted]="isSubmitted"
+      [pattern]="letterPattern"
+      errorMessage="Only letters allowed"
     ></app-input-field>
 
     <app-input-field
@@ -43,14 +45,18 @@
       [(ngModel)]="newUser.Location"
       name="address"
       type="text"
+      [submitted]="isSubmitted"
     ></app-input-field>
     <app-input-field
       label="Total Spent"
       class="border-0 bg-transparent"
-      errorMessage="this field is required"
+      errorMessage="only num"
       [(ngModel)]="newUser.TotalSpent"
       name="totalspent"
       type="text"
+      [submitted]="isSubmitted"
+      [pattern]="numberPattern"
+      errorMessage="Only numbers allowed"
     ></app-input-field>
     <app-input-field
       label="Last Order"
@@ -59,6 +65,9 @@
       [(ngModel)]="newUser.LastOrder"
       name="lastorder"
       type="text"
+      [submitted]="isSubmitted"
+      [pattern]="numberPattern"
+      errorMessage="Only numbers allowed"
     ></app-input-field>
 
     <div class="flex w-96 py-2 px-2 gap-2">
@@ -67,9 +76,9 @@
         class="hover:bg-orange text-white font-bold py-2 px-4 rounded"
         style="background: #ff720d"
         type="button"
-        (click)="addUser()"
+        (click)="addUser(customerForm)"
       >
-        Save
+        Add
       </button>
       <button
         class="hover:bg-orange text-white font-bold py-2 px-4 rounded"

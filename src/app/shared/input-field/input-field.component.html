@@ -1,17 +1,29 @@
 <div class="flex flex-col w-90 py-2 px-2">
-  <label class="text-sm" for="customername">{{ label }}</label>
+  <label class="text-sm" for="">{{ label }}</label>
   <input
     class="form-control border-gray-300 mt-2 focus:ring-0 focus:border-orange-400"
     [name]="name"
     id="name"
     [type]="type"
+    [pattern]="pattern"
     required
     autocomplete="off"
     [(ngModel)]="value"
-    [pattern]="pattern"
+    #inputField="ngModel"
+    [placeholder]="placeholder"
   />
 
-  <div *ngIf="!value" class="alert text-red-500 text-md">
+  <div
+    *ngIf="inputField.invalid && !value && submitted"
+    class="alert text-red-500 text-md"
+  >
+    this field is required
+  </div>
+
+  <div
+    *ngIf="inputField?.errors?.['pattern'] && submitted"
+    class="alert text-red-500 text-md"
+  >
     {{ errorMessage }}
   </div>
 </div>

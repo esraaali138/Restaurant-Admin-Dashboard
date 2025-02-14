@@ -4,9 +4,10 @@ import { AddCustomerComponent } from './components/add-customer/add-customer.com
 import { CustomerComponent } from './components/customer/customer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { InputFieldComponent } from '../../shared/input-field/input-field.component';
+import { ShardModule } from '../../shared/shared.module';
+
 @NgModule({
-  declarations: [AddCustomerComponent, CustomerComponent, InputFieldComponent],
-  imports: [CommonModule, HttpClientModule, FormsModule],
+  declarations: [AddCustomerComponent, CustomerComponent],
+  imports: [CommonModule, HttpClientModule, FormsModule, ShardModule],
 })
 export class CustomersModule {}

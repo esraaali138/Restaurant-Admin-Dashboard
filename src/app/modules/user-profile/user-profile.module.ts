@@ -6,10 +6,15 @@ import { FormsModule } from '@angular/forms';
 import { AuthService } from './services/auth.service';
 import { HttpClientModule } from '@angular/common/http';
 import { LogInComponent } from './components/log-in/log-in.component';
+import { ShardModule } from '../../shared/shared.module';
 @NgModule({
-  declarations: [SignUpComponent, ProfileComponent, LogInComponent],
-  imports: [CommonModule, FormsModule, HttpClientModule],
+  declarations: [
+    SignUpComponent,
+    ProfileComponent,
+    LogInComponent,
+  ],
+  imports: [CommonModule, FormsModule, HttpClientModule ,ShardModule],
   providers: [AuthService],
-  exports:[LogInComponent]
+  exports: [LogInComponent],
 })
 export class UserProfileModule {}

@@ -11,6 +11,11 @@ import { CommonModule } from '@angular/common';
 import { CustomersModule } from './modules/customers/customers.module';
 import { authInterceptor } from './auth.interceptor';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { HighlightDirective } from './highlight.directive';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { providePrimeNG } from 'primeng/config';
+import Aura from '@primeng/themes/aura';
+import { AccordionModule } from 'primeng/accordion';
 
 @NgModule({
   declarations: [
@@ -19,6 +24,7 @@ import { provideHttpClient, withInterceptors } from '@angular/common/http';
     DashboardContentComponent,
     HeaderComponent,
     MainContentComponent,
+    HighlightDirective,
   ],
   imports: [
     BrowserModule,
@@ -26,10 +32,16 @@ import { provideHttpClient, withInterceptors } from '@angular/common/http';
     UserProfileModule,
     CommonModule,
     CustomersModule,
+    AccordionModule
   ],
-  providers: [
-    provideHttpClient(withInterceptors([authInterceptor])),
+  providers: [provideHttpClient(withInterceptors([authInterceptor])) , 
 
+    provideAnimationsAsync(),
+    providePrimeNG({
+        theme: {
+            preset: Aura
+        }
+    })
   ],
   bootstrap: [AppComponent],
 })

@@ -1,10 +1,9 @@
+import { Customer } from './../../models/customer';
 import { Component, OnInit } from '@angular/core';
 import { CustomerService } from '../../services/customer.service';
-import { Customer } from '../../models/customer';
 @Component({
   selector: 'app-customer',
   standalone: false,
-
   templateUrl: './customer.component.html',
   styleUrl: './customer.component.css',
 })
@@ -12,10 +11,14 @@ export class CustomerComponent implements OnInit {
   constructor(private customerService: CustomerService) {}
   customers!: Customer[];
   openPopup!: boolean;
+  selectedAll: boolean = false;
+  isDeletedPopup: boolean = false;
+  isOpen = false;
+  selectedIndex: any;
   ngOnInit(): void {
     this.customerService.getCustomers().subscribe({
       next: (res) => {
-        console.log('res', res);
+        // console.log('res', res);
 
         this.customers = res;
       },
@@ -47,13 +50,32 @@ export class CustomerComponent implements OnInit {
     this.sortDirection[column] = !this.sortDirection[column];
   }
 
-  openModel(): void {
-    this.openPopup = true;
+  openModel(type: string): void {
+    if (type === 'add') {
+      this.openPopup = true;
+    } else {
+      this.isDeletedPopup = true;
+    }
     document.body.style.overflow = 'hidden';
   }
 
-  closeModel(): void {
-    this.openPopup = false;
+  closeModel(type: string): void {
+    if (type === 'add') {
+      this.openPopup = false;
+    } else {
+      this.isDeletedPopup = false;
+      this.selectedIndex = null;
+    }
     document.body.style.overflow = 'auto';
+  }
+
+  selectAll() {
+    this.customers.forEach((customer) => {
+      customer.selected = this.selectedAll;
+    });
+  }
+
+  showModel(index: any) {
+    this.selectedIndex = this.selectedIndex === index ? null : index;
   }
 }

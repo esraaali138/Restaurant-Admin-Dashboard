@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SignUpComponent } from './sign-up.component';
+import { By } from '@angular/platform-browser';
 
 describe('SignUpComponent', () => {
   let component: SignUpComponent;
@@ -20,4 +21,9 @@ describe('SignUpComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should mark username as required' , ()=>{
+    const userControl = fixture.debugElement.query(By.css('input[name="username"]')).nativeElement;
+  })
+
 });

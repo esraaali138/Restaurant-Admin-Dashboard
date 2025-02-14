@@ -12,7 +12,7 @@ const routes: Routes = [
     path: 'customers',
     loadChildren: () =>
       import('./modules/customers/customers-routing.module').then(
-        (m) => m.CustomersRoutingModule
+        (m) => m.CustomersRoutingModule /// see tomorow
       ),
   },
   {
@@ -21,6 +21,10 @@ const routes: Routes = [
       import('./modules/user-profile/user-profile-routing.module').then(
         (m) => m.UserProfileRoutingModule
       ),
+  },
+  {
+    path: '**',
+    redirectTo: 'dashboard', //will be 404
   },
 ];
 

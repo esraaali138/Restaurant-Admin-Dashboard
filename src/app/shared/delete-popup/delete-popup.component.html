@@ -1,0 +1,43 @@
+<div
+  class="flex flex-col justify-between bg-white w-[380px] fixed top-[5%] left-1/2 transform -translate-x-1/2 -translate-y-[5%] h-[200px] z-[2000] shadow-lg p-4"
+>
+  <div class="flex justify-between items-center">
+    <p class="text-lg font-semibold">Confirm the action</p>
+    <button class="p-1 hover:bg-gray-200 rounded-full" (click)="closeModel()">
+      <svg
+        class="w-6 h-6 text-gray-500"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    </button>
+  </div>
+
+  <hr />
+
+  <div>
+    <p class="text-gray-600">Do you really want to delete this customer ?</p>
+  </div>
+
+  <hr />
+
+  <div class="flex justify-end gap-3">
+    <button
+      (click)="closeModel()"
+      class="px-4 py-2 bg-gray-300 rounded-md hover:bg-gray-400"
+    >
+      Cancel
+    </button>
+    <button class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600">
+      Confirm
+    </button>
+  </div>
+</div>

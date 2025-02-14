@@ -10,10 +10,10 @@ import { Component, Input } from '@angular/core';
 export class InputFieldComponent {
   @Input() type!: string;
   @Input() name!: string;
-  @Input() placeholder!: string;
-  @Input() errorMessage: string = 'This field is required'
-  @Input() value!: string;
+  @Input() placeholder: string = '';
+  @Input() errorMessage: string = '';
+  @Input() value: any;
   @Input() label!: string;
-  @Input() pattern: any;
-
+  @Input() pattern!: string;
+  @Input() submitted = false;
 }

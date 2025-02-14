@@ -5,3 +5,19 @@
 .toggled{
     display: none;
  }
+
+ ::ng-deep p-accordion,
+::ng-deep p-accordion-panel,
+::ng-deep p-accordion-header,
+::ng-deep .p-accordioncontent-content {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.pi{
+    font-size: 20px !important;
+    /* margin-bottom: 2px !important; */
+}
+::ng-deep p-accordion-header {
+    width: 150px !important;
+}

@@ -6,4 +6,5 @@ export interface Customer {
   TotalSpent: any;
   LastOrder?: any;
   [key: string]: any;
+  selected : boolean
 }
