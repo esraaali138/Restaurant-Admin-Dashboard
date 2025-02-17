@@ -7,7 +7,7 @@
     class="bg-red-300 mt-2 w-95 p-5 flex flex-col justify-center rounded h-88 bottom-100"
   >
     <div class="flex justify-between">
-      <p>add contact</p>
+      <p>{{ type === "add" ? "Add Customer" : "Edit Customer" }}</p>
       <button (click)="closeModel()">
         <svg
           class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -78,7 +78,7 @@
         type="button"
         (click)="addUser(customerForm)"
       >
-        Add
+        {{ type === "add" ? "Add" : "Edit" }}
       </button>
       <button
         class="hover:bg-orange text-white font-bold py-2 px-4 rounded"

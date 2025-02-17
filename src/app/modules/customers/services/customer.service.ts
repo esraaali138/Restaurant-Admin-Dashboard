@@ -14,8 +14,7 @@ export class CustomerService {
   addUser(newUser: Customer) {
     return this.http.post(this.apiUrl, newUser);
   }
-
-  calc(a:number , b:number){
-    return a + b
+  deleteUser(id: string) {
+    return this.http.delete(`${this.apiUrl}/${id}`);
   }
 }

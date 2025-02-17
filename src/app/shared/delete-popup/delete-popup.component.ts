@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
+import { CustomerService } from '../../modules/customers/services/customer.service';
+import { Customer } from '../../modules/customers/models/customer';
 
 @Component({
   selector: 'app-delete-popup',
@@ -6,11 +8,26 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: 'delete-popup.component.css',
   standalone: false,
 })
-export class DeletePopupComponent {
+export class DeletePopupComponent implements OnInit {
+  constructor(private customerService: CustomerService) {}
   @Input() isDelete = false;
+  @Input() id: any;
   @Output() close: EventEmitter<void> = new EventEmitter();
+  name: string = '';
+  ngOnInit(): void {}
 
   closeModel() {
     this.close.emit();
+  }
+
+  onDelete(customerId: string) {
+    this.customerService.deleteUser(customerId).subscribe({
+      next: (res) => {
+        this.closeModel();
+      },
+      error: (err) => {
+        console.error('Error deleting customer:', err);
+      },
+    });
   }
 }

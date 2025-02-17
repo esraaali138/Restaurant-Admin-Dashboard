@@ -24,7 +24,7 @@
   <hr />
 
   <div>
-    <p class="text-gray-600">Do you really want to delete this customer ?</p>
+    <p class="text-gray-600">Do you really want to delete this record?</p>
   </div>
 
   <hr />
@@ -36,7 +36,10 @@
     >
       Cancel
     </button>
-    <button class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600">
+    <button
+      (click)="onDelete(id)"
+      class="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600"
+    >
       Confirm
     </button>
   </div>

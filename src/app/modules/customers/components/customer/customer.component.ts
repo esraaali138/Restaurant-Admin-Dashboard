@@ -13,23 +13,26 @@ export class CustomerComponent implements OnInit {
   openPopup!: boolean;
   selectedAll: boolean = false;
   isDeletedPopup: boolean = false;
-  isOpen = false;
   selectedIndex: any;
+  selectedCustomer: Customer | null = null;
+  isEdit = false;
+  status = '';
+  showBulk = false;
+  isFilter = false;
   ngOnInit(): void {
     this.customerService.getCustomers().subscribe({
       next: (res) => {
-        // console.log('res', res);
-
         this.customers = res;
       },
       error: (err) => {
         console.log('err', err);
       },
     });
+    this.status = this.openPopup ? 'add' : 'edit';
   }
 
   sortDirection: { [key: string]: boolean } = {
-    CustomerID: true,
+    id: true,
     JoinDate: true,
     CustomerName: true,
     Location: true,
@@ -51,20 +54,39 @@ export class CustomerComponent implements OnInit {
   }
 
   openModel(type: string): void {
-    if (type === 'add') {
-      this.openPopup = true;
-    } else {
-      this.isDeletedPopup = true;
+    this.status = type;
+    switch (type) {
+      case 'add':
+        this.openPopup = true;
+        this.isEdit = false;
+        this.selectedIndex = null;
+        break;
+      case 'edit':
+        this.isEdit = true;
+        this.selectedIndex = null;
+        this.openPopup = false;
+        break;
+      case 'delete':
+        this.isDeletedPopup = true;
+        break;
+      default:
+        console.warn(`Unknown popup type: ${type}`);
+        return;
     }
     document.body.style.overflow = 'hidden';
   }
 
   closeModel(type: string): void {
-    if (type === 'add') {
-      this.openPopup = false;
-    } else {
-      this.isDeletedPopup = false;
-      this.selectedIndex = null;
+    switch (type) {
+      case 'add':
+        this.openPopup = false;
+        break;
+      case 'edit':
+        this.isEdit = false;
+        break;
+      case 'delete':
+        this.isDeletedPopup = false;
+        this.selectedIndex = null;
     }
     document.body.style.overflow = 'auto';
   }
@@ -77,5 +99,14 @@ export class CustomerComponent implements OnInit {
 
   showModel(index: any) {
     this.selectedIndex = this.selectedIndex === index ? null : index;
+  }
+
+  openBulk() {
+    this.showBulk = !this.showBulk;
+    this.isFilter = false;
+  }
+  filterby() {
+    this.isFilter = !this.isFilter;
+    this.showBulk = false;
   }
 }

@@ -12,10 +12,11 @@ export class AddCustomerComponent {
   constructor(private customerService: CustomerService) {}
 
   @Input() isOpen!: boolean;
+  @Input() type: 'add' | 'edit' = 'add';
   @Output() close: EventEmitter<void> = new EventEmitter();
 
   newUser = {
-    CustomerID: '5552338',
+    id: '',
     CustomerName: '',
     TotalSpent: null,
     Location: '',
@@ -44,11 +45,9 @@ export class AddCustomerComponent {
       this.newUser.TotalSpent &&
       this.newUser.Location
     ) {
-      const updatedCustomerID = Number(this.newUser.CustomerID) + 1;
       const newDate = new Date();
       this.newUser = {
         ...this.newUser,
-        CustomerID: updatedCustomerID.toString(),
         JoinDate: formatDate(newDate, 'dd MMMM yyyy, hh:mm a', 'en-US'),
       };
       this.customerService.addUser(this.newUser).subscribe({
@@ -63,4 +62,3 @@ export class AddCustomerComponent {
     } else return;
   }
 }
- 

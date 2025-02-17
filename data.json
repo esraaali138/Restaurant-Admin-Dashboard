@@ -1,70 +1,6 @@
 {
   "customers": [
     {
-      "CustomerID": "5552311",
-      "CustomerName": "Olivia Shine",
-      "JoinDate": "01 July 2023, 12:42 AM",
-      "Location": "35 Station Road London",
-      "TotalSpent": 82.46,
-      "LastOrder": 42.85,
-      "id": "b62e"
-    },
-    {
-      "CustomerID": "5552312",
-      "CustomerName": "James Brown",
-      "JoinDate": "12 July 2023, 03:15 PM",
-      "Location": "42 Elm Street Manchester",
-      "TotalSpent": 120.5,
-      "LastOrder": 58.2,
-      "id": "bc54"
-    },
-    {
-      "CustomerID": "5552313",
-      "CustomerName": "Sophia Green",
-      "JoinDate": "19 July 2023, 09:00 AM",
-      "Location": "78 King Street Birmingham",
-      "TotalSpent": 75.3,
-      "LastOrder": 45.1,
-      "id": "cdb2"
-    },
-    {
-      "CustomerID": "5552314",
-      "CustomerName": "Mason Black",
-      "JoinDate": "25 July 2023, 02:40 PM",
-      "Location": "56 Queen Road Leeds",
-      "TotalSpent": 105.75,
-      "LastOrder": 60.15,
-      "id": "32f0"
-    },
-    {
-      "CustomerID": "5552315",
-      "CustomerName": "Emma White",
-      "JoinDate": "30 July 2023, 11:20 AM",
-      "Location": "22 Park Lane Liverpool",
-      "TotalSpent": 99.99,
-      "LastOrder": 50,
-      "id": "a559"
-    },
-    {
-      "CustomerID": "5552316",
-      "CustomerName": "Liam Blue",
-      "JoinDate": "05 August 2023, 04:30 PM",
-      "Location": "18 Oxford Street Cardiff",
-      "TotalSpent": 60.8,
-      "LastOrder": 35,
-      "id": "0fe2"
-    },
-    {
-      "CustomerID": "5552317",
-      "CustomerName": "Ava Brown",
-      "JoinDate": "11 August 2023, 01:10 PM",
-      "Location": "99 High Street Edinburgh",
-      "TotalSpent": 150.45,
-      "LastOrder": 75.3,
-      "id": "827a"
-    },
-    {
-      "CustomerID": "5552318",
       "CustomerName": "Lucas Gray",
       "JoinDate": "17 August 2023, 05:25 PM",
       "Location": "14 Rose Street Glasgow",
@@ -73,7 +9,6 @@
       "id": "2cf7"
     },
     {
-      "CustomerID": "5552319",
       "CustomerName": "Mia Red",
       "JoinDate": "22 August 2023, 10:00 AM",
       "Location": "33 Victoria Road Newcastle",
@@ -82,7 +17,6 @@
       "id": "9102"
     },
     {
-      "CustomerID": "5552320",
       "CustomerName": "Ethan Yellow",
       "JoinDate": "27 August 2023, 06:15 PM",
       "Location": "60 Baker Street Bristol",
@@ -91,7 +25,6 @@
       "id": "ae1e"
     },
     {
-      "CustomerID": "5552321",
       "CustomerName": "Isabella Purple",
       "JoinDate": "01 September 2023, 09:30 AM",
       "Location": "72 Abbey Road Sheffield",
@@ -100,7 +33,6 @@
       "id": "223f"
     },
     {
-      "CustomerID": "5552322",
       "CustomerName": "Oliver Pink",
       "JoinDate": "04 September 2023, 01:45 PM",
       "Location": "44 Green Lane Nottingham",
@@ -109,7 +41,6 @@
       "id": "68e8"
     },
     {
-      "CustomerID": "5552323",
       "CustomerName": "Charlotte Grey",
       "JoinDate": "10 September 2023, 03:10 PM",
       "Location": "11 Willow Road Southampton",
@@ -118,7 +49,6 @@
       "id": "4faf"
     },
     {
-      "CustomerID": "5552324",
       "CustomerName": "Benjamin White",
       "JoinDate": "16 September 2023, 02:00 PM",
       "Location": "66 Maple Avenue York",
@@ -127,7 +57,6 @@
       "id": "753a"
     },
     {
-      "CustomerID": "5552325",
       "CustomerName": "Ella Black",
       "JoinDate": "21 September 2023, 12:30 PM",
       "Location": "31 Cherry Street Coventry",
@@ -136,7 +65,6 @@
       "id": "d350"
     },
     {
-      "CustomerID": "5552326",
       "CustomerName": "Logan Blue",
       "JoinDate": "25 September 2023, 09:40 AM",
       "Location": "40 Pine Road Derby",
@@ -145,7 +73,6 @@
       "id": "2351"
     },
     {
-      "CustomerID": "5552327",
       "CustomerName": "Amelia Pink",
       "JoinDate": "30 September 2023, 04:20 PM",
       "Location": "25 Lavender Street Wakefield",
@@ -154,7 +81,6 @@
       "id": "c228"
     },
     {
-      "CustomerID": "5552328",
       "CustomerName": "Henry Orange",
       "JoinDate": "05 October 2023, 10:50 AM",
       "Location": "48 Birch Lane Kingston",
@@ -163,7 +89,6 @@
       "id": "b099"
     },
     {
-      "CustomerID": "5552329",
       "CustomerName": "Scarlett Green",
       "JoinDate": "10 October 2023, 02:30 PM",
       "Location": "53 Cedar Road Durham",
@@ -172,7 +97,6 @@
       "id": "556e"
     },
     {
-      "CustomerID": "5552330",
       "CustomerName": "Sebastian Red",
       "JoinDate": "15 October 2023, 01:10 PM",
       "Location": "12 Oak Avenue Luton",
@@ -181,7 +105,6 @@
       "id": "fd13"
     },
     {
-      "CustomerID": "5552331",
       "CustomerName": "Zoe Violet",
       "JoinDate": "20 October 2023, 05:00 PM",
       "Location": "34 Poplar Street Cardiff",
@@ -190,7 +113,6 @@
       "id": "e52c"
     },
     {
-      "CustomerID": "5552332",
       "CustomerName": "James Pink",
       "JoinDate": "25 October 2023, 03:20 PM",
       "Location": "19 Elm Road Aberdeen",
@@ -199,7 +121,6 @@
       "id": "1bff"
     },
     {
-      "CustomerID": "5552333",
       "CustomerName": "Grace Green",
       "JoinDate": "01 November 2023, 02:10 PM",
       "Location": "7 Maple Road London",
@@ -208,7 +129,6 @@
       "id": "9cee"
     },
     {
-      "CustomerID": "5552334",
       "CustomerName": "Daniel Brown",
       "JoinDate": "06 November 2023, 01:30 PM",
       "Location": "82 Pine Street Edinburgh",
@@ -217,7 +137,6 @@
       "id": "78e9"
     },
     {
-      "CustomerID": "5552335",
       "CustomerName": "Madison White",
       "JoinDate": "10 November 2023, 03:50 PM",
       "Location": "18 Oak Street Sheffield",
@@ -226,7 +145,6 @@
       "id": "438c"
     },
     {
-      "CustomerID": "5552336",
       "CustomerName": "William Yellow",
       "JoinDate": "15 November 2023, 04:00 PM",
       "Location": "99 Birch Road Leeds",
@@ -235,7 +153,6 @@
       "id": "0d55"
     },
     {
-      "CustomerID": "5552337",
       "CustomerName": "Sophia Black",
       "JoinDate": "20 November 2023, 02:20 PM",
       "Location": "50 Oak Lane Nottingham",
@@ -244,19 +161,12 @@
       "id": "87a3"
     },
     {
-      "CustomerID": "5552338",
       "CustomerName": "Jack Green",
       "JoinDate": "25 November 2022023, 03:30 PM",
       "Location": "30 Oak Lane Sheffield",
       "TotalSpent": 132.4,
       "LastOrder": 88.3,
       "id": "d7bf"
-    },
-    {
-      "id": "6c02",
-      "CustomerName": "djd",
-      "TotalSpent": "78",
-      "Location": "dhd"
     },
     {
       "id": "4ceb",
@@ -291,7 +201,6 @@
     },
     {
       "id": "4fba",
-      "CustomerID": "5552339",
       "CustomerName": "sara",
       "TotalSpent": 0,
       "Location": "elmahalla-elkubra",
@@ -299,7 +208,6 @@
     },
     {
       "id": "1a85",
-      "CustomerID": "5552339",
       "CustomerName": "ziz",
       "TotalSpent": 0,
       "Location": "elmahalla-elkubra ",
@@ -307,44 +215,7 @@
       "JoinDate": "2025-01-26"
     },
     {
-      "id": "4ec6",
-      "CustomerID": "5552339",
-      "CustomerName": "es",
-      "TotalSpent": 0,
-      "Location": "elmahalla-elkubra ",
-      "LastOrder": 0,
-      "JoinDate": "Jan 26, 2025, 8:03:50 PM"
-    },
-    {
-      "id": "8738",
-      "CustomerID": "5552339",
-      "CustomerName": "ببس",
-      "TotalSpent": 0,
-      "Location": "سلس",
-      "LastOrder": 0,
-      "JoinDate": "26 January 2025, 08:06 PM"
-    },
-    {
-      "id": "4969",
-      "CustomerID": "5552339",
-      "CustomerName": "",
-      "TotalSpent": null,
-      "Location": "",
-      "LastOrder": null,
-      "JoinDate": "26 January 2025, 10:28 PM"
-    },
-    {
-      "id": "4ef6",
-      "CustomerID": "5552339",
-      "CustomerName": "",
-      "TotalSpent": null,
-      "Location": "",
-      "LastOrder": null,
-      "JoinDate": "26 January 2025, 10:39 PM"
-    },
-    {
       "id": "6ce5",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -353,7 +224,6 @@
     },
     {
       "id": "9adb",
-      "CustomerID": "5552340",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -362,7 +232,6 @@
     },
     {
       "id": "d7d9",
-      "CustomerID": "5552341",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -371,7 +240,6 @@
     },
     {
       "id": "2c86",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -380,7 +248,6 @@
     },
     {
       "id": "b347",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -389,7 +256,6 @@
     },
     {
       "id": "3881",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -398,7 +264,6 @@
     },
     {
       "id": "0c56",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -407,7 +272,6 @@
     },
     {
       "id": "bde7",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -416,7 +280,6 @@
     },
     {
       "id": "1d5c",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -425,7 +288,6 @@
     },
     {
       "id": "18b4",
-      "CustomerID": "5552340",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -434,7 +296,6 @@
     },
     {
       "id": "c64e",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -444,7 +305,6 @@
     },
     {
       "id": "3545",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -454,7 +314,6 @@
     },
     {
       "id": "684a",
-      "CustomerID": "5552340",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -464,7 +323,6 @@
     },
     {
       "id": "3cf6",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -474,7 +332,6 @@
     },
     {
       "id": "14c9",
-      "CustomerID": "5552340",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -484,7 +341,6 @@
     },
     {
       "id": "bbc7",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -494,7 +350,6 @@
     },
     {
       "id": "1c96",
-      "CustomerID": "5552340",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -504,7 +359,6 @@
     },
     {
       "id": "305b",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -514,7 +368,6 @@
     },
     {
       "id": "38bf",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -524,7 +377,6 @@
     },
     {
       "id": "c727",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -534,7 +386,6 @@
     },
     {
       "id": "a581",
-      "CustomerID": "5552340",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -544,7 +395,6 @@
     },
     {
       "id": "4d1a",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -554,7 +404,6 @@
     },
     {
       "id": "25de",
-      "CustomerID": "5552340",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -564,7 +413,6 @@
     },
     {
       "id": "96e3",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -574,7 +422,6 @@
     },
     {
       "id": "17e1",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -584,7 +431,6 @@
     },
     {
       "id": "d483",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -594,7 +440,6 @@
     },
     {
       "id": "d9c3",
-      "CustomerID": "5552340",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -604,7 +449,6 @@
     },
     {
       "id": "d50f",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -614,7 +458,6 @@
     },
     {
       "id": "36a6",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -624,7 +467,6 @@
     },
     {
       "id": "129d",
-      "CustomerID": "5552340",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -634,7 +476,6 @@
     },
     {
       "id": "ec0a",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -644,7 +485,6 @@
     },
     {
       "id": "5cd0",
-      "CustomerID": "5552340",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -654,7 +494,6 @@
     },
     {
       "id": "2c25",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
@@ -664,7 +503,6 @@
     },
     {
       "id": "8273",
-      "CustomerID": "5552339",
       "CustomerName": "",
       "TotalSpent": null,
       "Location": "",
