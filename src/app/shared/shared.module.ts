@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
-import { InputFieldComponent } from './input-field/input-field.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { DeletePopupComponent } from './delete-popup/delete-popup.component';
+import * as SharedComponents from './components';
 @NgModule({
-  declarations: [InputFieldComponent, DeletePopupComponent],
+  declarations: [
+    SharedComponents.DeletePopupComponent,
+    SharedComponents.InputFieldComponent,
+  ],
   imports: [FormsModule, CommonModule],
-  providers: [],
-  exports: [InputFieldComponent, DeletePopupComponent]
+  exports: [
+    SharedComponents.DeletePopupComponent,
+    SharedComponents.InputFieldComponent
+  ],
 })
 export class ShardModule {}

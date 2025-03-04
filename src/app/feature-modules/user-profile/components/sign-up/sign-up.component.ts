@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../../../../core/services/auth.service';
 import { AuthUser } from '../../models/auth-user';
 @Component({
   selector: 'app-sign-up',
@@ -9,7 +9,6 @@ import { AuthUser } from '../../models/auth-user';
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.css',
 })
-
 export class SignUpComponent {
   constructor(private router: Router, private authService: AuthService) {}
   isSubmitted: boolean = false;

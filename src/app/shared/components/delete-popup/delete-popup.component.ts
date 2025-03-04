@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, Output, OnInit } from '@angular/core';
-import { CustomerService } from '../../modules/customers/services/customer.service';
-import { Customer } from '../../modules/customers/models/customer';
+import { CustomerService } from '../../../feature-modules/customers/services/customer.service';
 
 @Component({
   selector: 'app-delete-popup',

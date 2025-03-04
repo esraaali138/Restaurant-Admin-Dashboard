@@ -1,7 +1,7 @@
-import { DashboardContentComponent } from './components/dashboard-content/dashboard-content.component';
+import { DashboardContentComponent } from './core/components/dashboard-content/dashboard-content.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './core/services/auth.guard';
 const routes: Routes = [
   {
     path: 'dashboard',
@@ -11,14 +11,14 @@ const routes: Routes = [
   {
     path: 'customers',
     loadChildren: () =>
-      import('./modules/customers/customers-routing.module').then(
+      import('./feature-modules/customers/customers-routing.module').then(
         (m) => m.CustomersRoutingModule /// see tomorow
       ),
   },
   {
     path: 'user',
     loadChildren: () =>
-      import('./modules/user-profile/user-profile-routing.module').then(
+      import('./feature-modules/user-profile/user-profile-routing.module').then(
         (m) => m.UserProfileRoutingModule
       ),
   },
